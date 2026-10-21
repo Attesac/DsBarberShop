@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 20px;
+}
+
+.logo {
+  line-height: 1;
+  color: #f4efe3;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Alfa Slab One", "Work Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #b3aa97;
+}
+
