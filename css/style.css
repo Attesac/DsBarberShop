@@ -1,6 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --fonte-logo: "Alfa Slab One", "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  --fonte-texto: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --body: #0a0a0a;
+  --texto: #b3aa97;
+  --titulo: #f4efe3;
+  --dourado: #d4af37;
+}
 
 * {
   margin: 0;
@@ -9,8 +18,10 @@
 }
 
 body {
-  background-color: #0a0a0a;
-  font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  background-color: var(--body);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
 }
 
 .container-header {
@@ -22,10 +33,10 @@ body {
 
 .logo {
   line-height: 1;
-  color: #f4efe3;
+  color: var(--titulo);
   text-decoration: none;
   font-size: 22px;
-  font-family: "Alfa Slab One", "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--fonte-logo);
 }
 
 .nav-links {
@@ -35,6 +46,80 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #b3aa97;
+  color: var(--texto);
 }
 
+.nav-link:hover {
+  filter: brightness(2);
+}
+
+.hero {
+  display:grid;
+  grid-template-columns: minmax(0, 480px) auto;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.texto h1, .texto p {
+  margin: 0;
+}
+
+.texto h1 {
+  font-family: var(--fonte-logo);
+  font-weight: 400;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  color: var(--dourado);
+}
+
+.texto p{
+  max-width: none;
+  line-height: 1.6;
+}
+
+.acoes {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--dourado);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--dourado);
+  color: var(--body);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--dourado);
+}
+
+.btn:hover {
+  filter: brightness(1.15);
+}
+
+.poste{
+  height: 330px;
+  width: auto;
+  justify-self:center
+}
